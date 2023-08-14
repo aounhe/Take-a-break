@@ -45,4 +45,37 @@ body {
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
   }
-
+  .front-image {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+      backface-visibility: hidden;
+      position: absolute;
+      border-radius: 10px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+  }
+  
+  .card .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card .back {
+    background-image: #e5e5f7;
+    opacity: 0.8;
+    background-image: radial-gradient(circle at center center, #f7d845, #e5e5f7), repeating-radial-gradient(circle at center center, #f7d845, #f7d845, 10px, transparent 20px, transparent 10px);
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+  }
+  
+  
